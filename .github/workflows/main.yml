@@ -14,8 +14,9 @@ jobs:
     - name: Add Bitbucket Remote Origin
       run: |
         git config --global user.name hansijk
-        git config --global http.extraHeader "Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP"
-        git remote set-url origin https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git
+        # git config --global http.extraHeader "Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP"
+        # git remote set-url origin https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git
+        git remote set-url origin https://username:BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP@aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git
         git fetch origin
 
     - name: Verify remote origin
