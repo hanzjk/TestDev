@@ -14,16 +14,7 @@ jobs:
     - name: Clone Bitbucket repository
       run: |
         git config --global user.name hansijk
-
-        # auth_header="Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP"
-        # git clone --depth 1 -c http.extraHeader="Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP" -c http.extraHeader="ngrok-skip-browser-warning: true" --branch main https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git bitbucket-repo
-        # git -c http.extraHeader="ngrok-skip-browser-warning: true" clone --depth 1 --branch main https://username:BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP@dfd7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git bitbucket-repo
-        # git -c http.extraHeader="$auth_header" -c http.extraHeader="ngrok-skip-browser-warning: true" clone --depth 1 --branch main https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git bitbucket-repo
-        # git remote add origin http.extraHeader="Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP" https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git 
-        # Set the http.extraHeader configuration
         git config --global http.extraHeader "Authorization: Bearer BBDC-MjQwMzk0MTQ1MTg3Ojl/SsR2GMSaaQqwFQbVDZDIwNxP"
-
-        # Add the remote repository
         git remote add origin https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git
 
     - name: Display repository content
