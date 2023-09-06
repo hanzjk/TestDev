@@ -5,7 +5,7 @@ on:
     inputs:
       repository-url:
         description: 'Bitbucket repository URL'
-        required: true
+        required: false
 
 jobs:
   checkout:
