@@ -2,6 +2,10 @@ name: Checkout Bitbucket Server Repository
 
 on:
   workflow_dispatch:
+    inputs:
+      repository-url:
+        description: 'Bitbucket repository URL'
+        required: true
 
 jobs:
   checkout:
@@ -15,7 +19,7 @@ jobs:
       run: |
         git config --global user.name hansijk
         git config http.extraHeader "Authorization: Bearer BBDC-NDY2MjI5NzM2Mjk4OgFKGMbWu5s9QhBIEluapEoRRjEK"
-        git remote set-url origin https://aae7-203-94-95-3.ngrok-free.app/scm/tes/testrepo.git
+        git remote set-url origin ${{ github.event.inputs.repository-url }}
         git fetch origin
 
     - name: Verify remote origin
