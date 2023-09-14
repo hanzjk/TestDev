@@ -1,9 +1,7 @@
 name: Bitbucket Checkout Workflow
 
 on:
-  push:
-    branches:
-      - main # Change this to the branch you want to trigger the workflow on
+  workflow_dispatch:
 
 jobs:
   checkout:
@@ -11,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout code from Bitbucket
-        uses: choreo-templates/bitbucket-checkout@v2.0.0
+        uses: choreo-templates/bitbucket-checkout@v0.2.0
         with:
           token: "BBDC-Njc1MTQ2NzY4NDY3OrNbWanSuCFKZNBI86WJW9no5daQ"
           serverUrl: "https://6f4f-203-94-95-3.ngrok-free.app"
