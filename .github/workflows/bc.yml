@@ -6,8 +6,13 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
-
+    
     steps:
+      - name: List Workspace Directory Contents
+        run: | 
+              echo "Workspace directory is ${{ github.workspace }}" 
+              ls -al "${{ github.workspace }}"
+
       - name: Checkout code from Bitbucket
         uses: choreo-templates/bitbucket-checkout@v0.1.0
         with:
