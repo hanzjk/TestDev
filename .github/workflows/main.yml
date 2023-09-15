@@ -18,7 +18,7 @@ jobs:
     - name: Add Bitbucket Remote Origin
       run: |
         git config --global user.name hansijk
-        git config http.extraHeader "Authorization: Bearer BBDC-NDY2MjI5NzM2Mjk4OgFKGMbWu5s9QhBIEluapEoRRjEK"
+        git config http.extraHeader "Authorization: Bearer BBDC-Njc1MTQ2NzY4NDY3OrNbWanSuCFKZNBI86WJW9no5daQ"
         git remote set-url origin ${{ github.event.inputs.repository-url }}
         git fetch origin
 
